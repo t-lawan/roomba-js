@@ -1,4 +1,4 @@
-# roomba-test
+# roomba-js
 
 ## how to run 
 ```bash
