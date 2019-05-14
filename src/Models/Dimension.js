@@ -1,3 +1,8 @@
+/**
+ *
+ *
+ * @class Dimension
+ */
 class Dimension {
     static getCoordinate(dimensionsString){
         return {

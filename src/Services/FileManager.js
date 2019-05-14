@@ -1,6 +1,11 @@
 let Dimension = require('../Models/Dimension');
 let fs = require('fs');
 let Validator = require('../Models/Validator');
+/**
+ *
+ *
+ * @class FileManager
+ */
 class FileManager {
 
     static getContents(url) {

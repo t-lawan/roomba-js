@@ -1,6 +1,16 @@
 import { DirectionConst} from '../Consts/DirectionConsts';
+/**
+ *
+ *
+ * @class Robot
+ */
 class Robot {
     
+    /**
+     *Creates an instance of Robot.
+     * @param {*} coordinates
+     * @memberof Robot
+     */
     constructor(coordinates) {
         this._position = coordinates;
     }
