@@ -51,9 +51,14 @@ class Robot {
      *
      * @memberof Robot
      */
-    getPosition(){
+    getPosition() {
         return this._position;
     }
+
+    static isOnPatch(patch, robotPosition) {
+        return (+patch.x === +robotPosition.x) && (+patch.y === +robotPosition.y);
+    }
+
 }
 
 module.exports = Robot;
