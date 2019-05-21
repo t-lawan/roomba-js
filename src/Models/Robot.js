@@ -1,11 +1,11 @@
-import { DirectionConst} from '../Consts/DirectionConsts';
+import { DirectionConst } from '../Consts/DirectionConsts';
 /**
  *
  *
  * @class Robot
  */
 class Robot {
-    
+
     /**
      *Creates an instance of Robot.
      * @param {*} coordinates
@@ -14,15 +14,15 @@ class Robot {
     constructor(coordinates) {
         this._position = coordinates;
     }
-    
+
     /**
      * Adds or Subtracts to the X or Y coordinate
      * depending on the Direction
      * @param direction
      * @memberof Robot
      */
-    move(direction){
-        switch(direction) {
+    move(direction) {
+        switch (direction) {
             case DirectionConst.N.id: {
                 this._position.y++;
                 break;
@@ -43,7 +43,7 @@ class Robot {
                 throw new Error(`There's an error with the directions provided`);
             }
         }
-        // console.log(`The robot moved ${direction} to ${this.position.x},${this.position.y}`);
+        // console.log(`The robot moved ${direction} to ${this._position.x},${this._position.y}`);
     }
 
     /**

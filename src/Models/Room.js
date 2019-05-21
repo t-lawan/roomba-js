@@ -14,7 +14,7 @@ class Room {
         this._dimension = dimension;
     }
 
-    getDimension(){
+    getDimension() {
         return this._dimension;
     }
 }
