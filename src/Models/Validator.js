@@ -1,3 +1,4 @@
+const Robot = require('../Models/Robot');
 /**
  *
  *
@@ -85,7 +86,7 @@ class Validator {
         const robotPosition = robot.getPosition();
 
         patchesOfDirt.forEach((patch) => {
-            const isRobotOnPatch= (+patch.x === +robotPosition.x) && (+patch.y === +robotPosition.y);
+            const isRobotOnPatch = Robot.isOnPatch(patch, robotPosition);
             valid = isRobotOnPatch ? true : valid;
         });
 
