@@ -28,9 +28,12 @@ class Program {
 
         while((index < lengthOfDirections) && (Validator.robotStaysInRoom(this.robot, this.room))) {
             this.robot.move(directions[index]);
+            
             if(Validator.isRobotOnPatchOfDirt(this.robot, this.patchesOfDirt)) {
                 numberOfDirtPatchesCleaned = numberOfDirtPatchesCleaned + 1;
+                this.removePatchOfDirt(this.robot.getPosition());
             }
+
             index++;
         }
 
@@ -46,6 +49,12 @@ class Program {
     logFinalResult(numberOfDirtPatchesCleaned) {
         console.log(chalk.bold.red(`Your robot ended at ${this.robot.getPosition().x},${this.robot.getPosition().y}`))
         console.log(chalk.bold.green(`Your robot picked up ${numberOfDirtPatchesCleaned} patches of dirt`));
+    }
+
+    removePatchOfDirt(robotPosition) {
+        this.patchesOfDirt = this.patchesOfDirt.filter((patch) => {
+            patch != robotPosition;
+        });
     }
 }
 
